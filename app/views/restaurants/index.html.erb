@@ -1,0 +1,13 @@
+<h1>Restaurants</h1>
+<div class="border border-2 border-dark p-2 m-2">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+    <% end %>
+  </ul>
+</div>
+
+<p>
+<i class="fa-sharp fa-solid fa-plus fa-beat"></i>
+<%= link_to "Add a restaurant", "restaurants/new" %>
+</p>
